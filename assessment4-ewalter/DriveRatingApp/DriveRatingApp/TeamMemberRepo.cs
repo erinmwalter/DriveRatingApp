@@ -9,6 +9,7 @@ namespace DriveRatingApp
     //Repository of Team Members
     public static class TeamMemberRepo
     {
+        public static List<TeamMember> teamList = GetTeamMembers();
 
         public static List<TeamMember> GetTeamMembers()
         {

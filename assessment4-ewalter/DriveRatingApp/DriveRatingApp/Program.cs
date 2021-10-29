@@ -24,12 +24,12 @@ namespace DriveRatingApp
                 else if (userID.StartsWith("l") || userID.StartsWith("d"))
                 {
                     //leader case and director case
-                    myTeam.ManagementMenu(myTeam.teamList[tmIndex]);
+                    myTeam.ManagementMenu(TeamMemberRepo.teamList[tmIndex]);
                 }
                 else
                 {
                     //tm case will also be default case. 
-                    myTeam.DisplayTM(tmIndex);
+                    Console.WriteLine(TeamMemberRepo.teamList[tmIndex]);
                 }
                 goOn = Continue("Return to Title Screen to enter another common ID? (y/n): ");
             }

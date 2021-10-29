@@ -12,8 +12,8 @@ namespace DriveRatingApp
 
         public override double GetBonus()
         {
-            //FIXME: need to connect this set director rating to bonus.
-            //SetDirectorRating();
+            
+            SetDirectorRating(TeamMemberRepo.teamList);
             //bonus amount is TRIPLED for directors, so just using base * 3. 
             return base.GetBonus() * 3;
         }

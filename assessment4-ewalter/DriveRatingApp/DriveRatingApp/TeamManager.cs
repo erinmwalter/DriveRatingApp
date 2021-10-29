@@ -5,16 +5,16 @@ namespace DriveRatingApp
 {
     class TeamManager
     {
-        public List<TeamMember> teamList = TeamMemberRepo.GetTeamMembers();
+        
 
         //gets index of TM if found.
         public int GetTMIndex(string userID)
         {
-            foreach (TeamMember tm in teamList)
+            foreach (TeamMember tm in TeamMemberRepo.teamList)
             {
                 if (tm.CommonId.Contains(userID))
                 {
-                    return teamList.IndexOf(tm);
+                    return TeamMemberRepo.teamList.IndexOf(tm);
                 }
             }
             return -1;
@@ -22,7 +22,7 @@ namespace DriveRatingApp
 
         public void DisplayTM(int index)
         {
-            Console.WriteLine(teamList[index]);
+            Console.WriteLine(TeamMemberRepo.teamList[index]);
         }
 
         //displays menu for management
@@ -69,7 +69,7 @@ namespace DriveRatingApp
                 case "l":
                     if (userId.StartsWith("t"))
                     {
-                        foreach (TeamMember tm in teamList)
+                        foreach (TeamMember tm in TeamMemberRepo.teamList)
                         {
                             if (tm.CommonId == userId)
                             {
@@ -86,7 +86,7 @@ namespace DriveRatingApp
                     }
                     break;
                 case "d":
-                    foreach (TeamMember tm in teamList)
+                    foreach (TeamMember tm in TeamMemberRepo.teamList)
                     {
                         if (tm.CommonId == userId)
                         {
@@ -105,29 +105,26 @@ namespace DriveRatingApp
         private void DisplayTeam(TeamMember manager)
         {
             string accessLevel = manager.CommonId.Substring(0, 1);
+            Console.WriteLine(accessLevel);
             Console.WriteLine("\nBonus Report:");
             switch (accessLevel)
             {
                 case "l":
-                    {
                         Console.WriteLine(manager);
-                        foreach (TeamMember tm in teamList)
+                        foreach (TeamMember tm in TeamMemberRepo.teamList)
                         {
                             if (tm.CommonId.StartsWith("t"))
                             {
                                 Console.WriteLine(tm);
                             }
                         }
-                    }
-                    break;
+                        break;
                 case "d":
-                    {
-                        foreach (TeamMember tm in teamList)
+                        foreach (TeamMember tm in TeamMemberRepo.teamList)
                         {
                             Console.WriteLine(tm);
                         }
-                    }
-                    break;
+                        break;
             }
 
         }
