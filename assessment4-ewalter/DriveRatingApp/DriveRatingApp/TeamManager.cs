@@ -105,7 +105,6 @@ namespace DriveRatingApp
         private void DisplayTeam(TeamMember manager)
         {
             string accessLevel = manager.CommonId.Substring(0, 1);
-            Console.WriteLine(accessLevel);
             Console.WriteLine("\nBonus Report:");
             switch (accessLevel)
             {
