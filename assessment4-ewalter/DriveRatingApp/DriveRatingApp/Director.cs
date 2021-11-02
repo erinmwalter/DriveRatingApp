@@ -7,7 +7,7 @@ namespace DriveRatingApp
     {
         public Director(string FirstName, string LastName, string CommonId, DriveRating DriveRating) : base(FirstName, LastName, CommonId, DriveRating)
         {
-
+         
         }
 
         public override double GetBonus()
@@ -31,7 +31,6 @@ namespace DriveRatingApp
             {
                 if (!tm.CommonId.Contains("d"))
                 {
-                    Console.WriteLine(tm);
                     switch (tm.DriveRating)
                     {
                         case DriveRating.NeedsImprovement:

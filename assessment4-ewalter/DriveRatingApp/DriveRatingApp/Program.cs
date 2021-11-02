@@ -11,7 +11,6 @@ namespace DriveRatingApp
             bool goOn = true;
 
             Console.WriteLine("Welcome to the Drive Review App!");
-
             while (goOn)
             {
                 string userID = GetInput("Enter Your Common ID: ");

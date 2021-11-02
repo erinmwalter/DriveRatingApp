@@ -15,11 +15,11 @@ namespace DriveRatingApp
         {
             List<TeamMember> teamMembers = new List<TeamMember>
             {
-                new TeamMember("Joe", "Spacito", "t1234", DriveRating.AchievingExpectations),
-                new TeamMember("Jane", "Carrie", "t1235", DriveRating.AchievingExpectations),
-                new TeamMember("Praj", "Nahim", "t1236", DriveRating.AchievingExpectations),
-                new Leader("Fitz", "Caldwell", "l2239", DriveRating.AchievingExpectations),
-                new Leader("Leslie", "Wrightfield", "l3239", DriveRating.AchievingExpectations),
+                new TeamMember("Joe", "Spacito", "t1234", DriveRating.Rockstar),
+                new TeamMember("Jane", "Carrie", "t1235", DriveRating.ExceedExpectations),
+                new TeamMember("Praj", "Nahim", "t1236", DriveRating.Rockstar),
+                new Leader("Fitz", "Caldwell", "l2239", DriveRating.Rockstar),
+                new Leader("Leslie", "Wrightfield", "l3239", DriveRating.ExceedExpectations),
                 new Director("Charlie", "Georgina", "d5538", DriveRating.AchievingExpectations),
             };
 

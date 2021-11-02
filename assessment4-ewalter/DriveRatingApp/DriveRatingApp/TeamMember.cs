@@ -53,7 +53,8 @@ namespace DriveRatingApp
 
         public override string ToString()
         {
-            return $"{FirstName} {LastName}. Drive rating is {DriveRating} and bonus is ${GetBonus()} ";
+            double bonus = GetBonus();
+            return $"{FirstName} {LastName}. Drive rating is {DriveRating} and bonus is ${bonus} ";
         }
 
 

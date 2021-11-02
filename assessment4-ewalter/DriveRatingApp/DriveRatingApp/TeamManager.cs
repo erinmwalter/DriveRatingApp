@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace DriveRatingApp
 {
     class TeamManager
     {
-        
+
 
         //gets index of TM if found.
         public int GetTMIndex(string userID)
@@ -109,21 +108,21 @@ namespace DriveRatingApp
             switch (accessLevel)
             {
                 case "l":
-                        Console.WriteLine(manager);
-                        foreach (TeamMember tm in TeamMemberRepo.teamList)
-                        {
-                            if (tm.CommonId.StartsWith("t"))
-                            {
-                                Console.WriteLine(tm);
-                            }
-                        }
-                        break;
-                case "d":
-                        foreach (TeamMember tm in TeamMemberRepo.teamList)
+                    Console.WriteLine(manager);
+                    foreach (TeamMember tm in TeamMemberRepo.teamList)
+                    {
+                        if (tm.CommonId.StartsWith("t"))
                         {
                             Console.WriteLine(tm);
                         }
-                        break;
+                    }
+                    break;
+                case "d":
+                    foreach (TeamMember tm in TeamMemberRepo.teamList)
+                    {
+                        Console.WriteLine(tm);
+                    }
+                    break;
             }
 
         }
@@ -131,7 +130,7 @@ namespace DriveRatingApp
         private DriveRating GetValidDriveRating()
         {
             string choice = Program.GetInput("Enter [0]Needs Improvement, [1]Achieving Expectations, [2]Exceed Expectations, [3]Rockstar:  ");
-            switch(choice)
+            switch (choice)
             {
                 case "0":
                     return DriveRating.NeedsImprovement;
@@ -145,7 +144,7 @@ namespace DriveRatingApp
                     Console.WriteLine("Invalid Selection. Try again.");
                     return GetValidDriveRating();
             }
-           
+
         }
     }
 }
